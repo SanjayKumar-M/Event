@@ -3,9 +3,9 @@ import EventRegistration from './Components/eventRegistration'
 import './Styles/App.css'
 
 const App = () => {
-  return (
-   <EventRegistration />
-  )
+    return (
+        <EventRegistration />
+    )
 }
 
 export default App

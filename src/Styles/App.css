@@ -4,6 +4,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background-image: linear-gradient(120deg, #151717 0%, #231232 100%);
 }
 
 

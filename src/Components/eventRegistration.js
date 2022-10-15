@@ -8,7 +8,7 @@ const EventRegistration = () => {
     const [email, setEmail] = useState(null);
     const [regNo, setregNo] = useState(null);
     const [mobileNo, setmobileNo] = useState(null);
-    const [uploadId,setuploadId] = useState(null);
+    const [uploadId, setuploadId] = useState(null);
 
     const handleInputChange = (e) => {
         const { id, value } = e.target;
@@ -27,7 +27,7 @@ const EventRegistration = () => {
         if (id === "mobileNo") {
             setmobileNo(value);
         }
-        if(id === "uploadId"){
+        if (id === "uploadId") {
             setuploadId(value);
         }
 
@@ -73,7 +73,7 @@ const EventRegistration = () => {
             </div>
             <div className="Id">
                 <h1>College Id</h1>
-                <input type="file" id="uploadId" value = {uploadId} onChange={(e) =>handleInputChange(e)}/>
+                <input type="file" id="uploadId" value={uploadId} onChange={(e) => handleInputChange(e)} />
 
             </div>
             <br></br><br></br>
