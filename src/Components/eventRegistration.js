@@ -10,6 +10,10 @@ const EventRegistration = () => {
     const [mobileNo, setmobileNo] = useState(null);
     const [uploadId, setuploadId] = useState(null);
 
+    
+
+
+
     const handleInputChange = (e) => {
         const { id, value } = e.target;
         if (id === "Name") {
@@ -33,6 +37,8 @@ const EventRegistration = () => {
 
     }
     const handleSubmit = () => {
+        
+
         console.log(Name, collegeName, email, regNo, mobileNo);
         let object = {
             Name: Name,
@@ -42,14 +48,17 @@ const EventRegistration = () => {
             mobileNo: mobileNo,
             uploadId: uploadId,
         }
+          
         const newPostKey = push(child(ref(database), 'posts')).key;
         const updates = {};
         updates['/' + newPostKey] = object
         return update(ref(database), updates);
+
     }
 
     return (
         <div className="form">
+
 
             <div className="username">
                 <h1>Name</h1>
@@ -69,7 +78,7 @@ const EventRegistration = () => {
             </div>
             <div className="mobileNo">
                 <h1>Mobile Number</h1>
-                <input type="number" id="mobileNo" value={mobileNo} onChange={(e) => handleInputChange(e)} placeholder="Confirm regNo" />
+                <input type="number" id="mobileNo" value={mobileNo} onChange={(e) => handleInputChange(e)} placeholder="Confirm MobileNo" />
             </div>
             <div className="Id">
                 <h1>College Id</h1>
@@ -78,8 +87,10 @@ const EventRegistration = () => {
             </div>
             <br></br><br></br>
             <div>
-                <button className="glow-on-hover" onClick={() => handleSubmit()} type="submit" >Register</button>
+                <button className="glow-on-hover" onClick={(e) => handleSubmit(e)} type="submit" >Register</button>
             </div>
+            
+
         </div>
 
     )
